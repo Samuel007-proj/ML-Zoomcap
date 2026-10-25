@@ -1,0 +1,107 @@
+Retrieving logs...
+============= i-004b76271bc70c5de ==============
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2026/10/25 00:13:34.987416 [INFO] Skipping Install yum packages
+2026/10/25 00:13:34.987423 [INFO] Skipping install docker plugins
+2026/10/25 00:13:34.987427 [INFO] Skipping Configure Docker Daemon
+2026/10/25 00:13:34.987431 [INFO] Skipping MarkBaked
+2026/10/25 00:13:34.987436 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:34.987440 [INFO] Executing instruction: TuneSystemSettings
+2026/10/25 00:13:34.987442 [INFO] Starting TuneSystemSettings
+2026/10/25 00:13:34.987448 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:34.989787 [INFO] Executing instruction: GetSetupLogRotate
+2026/10/25 00:13:34.989790 [INFO] Initialize LogRotate files and directories
+2026/10/25 00:13:35.008166 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:35.008178 [INFO] Executing instruction: BootstrapCFNHup
+2026/10/25 00:13:35.008180 [INFO] Bootstrap cfn-hup
+2026/10/25 00:13:35.010365 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb-command-handler.conf to /etc/cfn/hooks.d/aws-eb-command-handler.conf
+2026/10/25 00:13:35.012606 [INFO] Executing instruction: StartCFNHup
+2026/10/25 00:13:35.012613 [INFO] Start cfn-hup
+2026/10/25 00:13:35.012627 [INFO] Running command: systemctl show -p PartOf cfn-hup.service
+2026/10/25 00:13:35.026690 [INFO] cfn-hup is not registered with EB yet, registering it now
+2026/10/25 00:13:35.026723 [INFO] Running command: systemctl show -p PartOf cfn-hup.service
+2026/10/25 00:13:35.041806 [INFO] Running command: systemctl daemon-reload
+2026/10/25 00:13:35.254441 [INFO] Running command: systemctl reset-failed
+2026/10/25 00:13:35.264920 [INFO] Running command: systemctl is-enabled aws-eb.target
+2026/10/25 00:13:35.273254 [INFO] Running command: systemctl enable aws-eb.target
+2026/10/25 00:13:35.553261 [INFO] Running command: systemctl start aws-eb.target
+2026/10/25 00:13:35.562539 [INFO] Running command: systemctl enable cfn-hup.service
+2026/10/25 00:13:35.834692 [INFO] Created symlink /etc/systemd/system/multi-user.target.wants/cfn-hup.service → /etc/systemd/system/cfn-hup.service.
+
+2026/10/25 00:13:35.834727 [INFO] Running command: systemctl is-active cfn-hup.service
+2026/10/25 00:13:35.843325 [INFO] cfn-hup process is not running, starting it now
+2026/10/25 00:13:35.843345 [INFO] Running command: systemctl show -p PartOf cfn-hup.service
+2026/10/25 00:13:35.853308 [INFO] Running command: systemctl is-active cfn-hup.service
+2026/10/25 00:13:35.861010 [INFO] Running command: systemctl start cfn-hup.service
+2026/10/25 00:13:35.960408 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:35.960425 [INFO] Executing instruction: SetupPublishLogCronjob
+2026/10/25 00:13:35.960429 [INFO] Setup publish logs cron job...
+2026/10/25 00:13:35.960433 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2026/10/25 00:13:35.963403 [INFO] Executing instruction: Start Docker
+2026/10/25 00:13:35.963424 [INFO] Starting Docker...
+2026/10/25 00:13:35.963494 [INFO] Copying file /opt/elasticbeanstalk/config/private/docker-log.conf to /etc/systemd/system/docker.service.d/docker-log.conf
+2026/10/25 00:13:35.965683 [INFO] Copying file /opt/elasticbeanstalk/config/private/docker-rsyslog.conf to /etc/rsyslog.d/docker-log.conf
+2026/10/25 00:13:35.967918 [INFO] Running command: systemctl restart rsyslog.service
+2026/10/25 00:13:36.233855 [INFO] Running command: systemctl show -p PartOf docker.service
+2026/10/25 00:13:36.250593 [INFO] Running command: systemctl daemon-reload
+2026/10/25 00:13:36.549891 [INFO] Running command: systemctl reset-failed
+2026/10/25 00:13:36.562648 [INFO] Running command: systemctl show -p PartOf docker.service
+2026/10/25 00:13:36.575418 [INFO] Running command: systemctl restart docker.service
+2026/10/25 00:13:38.606513 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:38.606531 [INFO] Executing instruction: Setup Docker Options
+2026/10/25 00:13:38.606535 [INFO] Setting up configurations for docker platform
+2026/10/25 00:13:38.619414 [INFO] Running command: systemctl show -p PartOf eb-docker-events.service
+2026/10/25 00:13:38.641769 [INFO] Running command: systemctl daemon-reload
+2026/10/25 00:13:38.915987 [INFO] Running command: systemctl reset-failed
+2026/10/25 00:13:38.925543 [INFO] Running command: systemctl enable eb-docker-events.service
+2026/10/25 00:13:39.229115 [INFO] Created symlink /etc/systemd/system/docker.service.wants/eb-docker-events.service → /etc/systemd/system/eb-docker-events.service.
+
+2026/10/25 00:13:39.229162 [INFO] Running command: systemctl show -p PartOf eb-docker-events.service
+2026/10/25 00:13:39.241701 [INFO] Running command: systemctl is-active eb-docker-events.service
+2026/10/25 00:13:39.251146 [INFO] Running command: systemctl start eb-docker-events.service
+2026/10/25 00:13:39.310750 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:39.310770 [INFO] Executing instruction: MarkBootstrapped
+2026/10/25 00:13:39.310774 [INFO] Starting MarkBootstrapped
+2026/10/25 00:13:39.310779 [INFO] Instance has NOT been bootstrapped
+2026/10/25 00:13:39.310995 [INFO] Marked instance as Bootstrapped
+2026/10/25 00:13:39.311000 [INFO] Executing instruction: Save CFN Stack Info
+2026/10/25 00:13:39.311052 [INFO] Executing cleanup logic
+2026/10/25 00:13:39.311063 [INFO] Platform Engine finished execution on command: env-launch
+
+2026/10/25 00:24:37.428959 [INFO] Starting...
+2026/10/25 00:24:37.429063 [INFO] Starting EBPlatform-PlatformEngine
+2026/10/25 00:24:37.429087 [INFO] reading event message file
+2026/10/25 00:24:37.429730 [INFO] Engine received EB command cfn-hup-exec
+
+2026/10/25 00:24:37.519796 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:380301679224:stack/awseb-e-dnpuwjntym-stack/c1b92c50-d008-11f1-bd8d-0effca191223 -r AWSEBAutoScalingGroup --region eu-north-1
+2026/10/25 00:24:37.702765 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:380301679224:stack/awseb-e-dnpuwjntym-stack/c1b92c50-d008-11f1-bd8d-0effca191223 -r AWSEBBeanstalkMetadata --region eu-north-1
+2026/10/25 00:24:37.878459 [INFO] checking whether command tail-log is applicable to this instance...
+2026/10/25 00:24:37.878471 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/10/25 00:24:37.878476 [INFO] Engine command: (tail-log)
+
+2026/10/25 00:24:37.878524 [INFO] Executing instruction: GetTailLogs
+2026/10/25 00:24:37.878528 [INFO] Tail Logs...
+2026/10/25 00:24:37.878991 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+2026/10/25 00:24:37.932588 [INFO] Executing cleanup logic
+2026/10/25 00:24:37.932663 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1792887877932,"severity":"INFO"}]}]}
+
+2026/10/25 00:24:37.932680 [INFO] Platform Engine finished execution on command: tail-log
+
+2026/10/25 00:27:44.674351 [INFO] Starting...
+2026/10/25 00:27:44.674400 [INFO] Starting EBPlatform-PlatformEngine
+2026/10/25 00:27:44.674421 [INFO] reading event message file
+2026/10/25 00:27:44.674935 [INFO] Engine received EB command cfn-hup-exec
+
+2026/10/25 00:27:44.765333 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:380301679224:stack/awseb-e-dnpuwjntym-stack/c1b92c50-d008-11f1-bd8d-0effca191223 -r AWSEBAutoScalingGroup --region eu-north-1
+2026/10/25 00:27:44.946261 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-north-1:380301679224:stack/awseb-e-dnpuwjntym-stack/c1b92c50-d008-11f1-bd8d-0effca191223 -r AWSEBBeanstalkMetadata --region eu-north-1
+2026/10/25 00:27:45.125519 [INFO] checking whether command tail-log is applicable to this instance...
+2026/10/25 00:27:45.125534 [INFO] this command is applicable to the instance, thus instance should execute command
+2026/10/25 00:27:45.125539 [INFO] Engine command: (tail-log)
+
+2026/10/25 00:27:45.125585 [INFO] Executing instruction: GetTailLogs
+2026/10/25 00:27:45.125587 [INFO] Tail Logs...
+2026/10/25 00:27:45.125837 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
